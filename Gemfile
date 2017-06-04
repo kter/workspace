@@ -54,4 +54,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'therubyracer'
 gem 'rails-i18n', '~> 5.0.0'
-
+gem 'less-rails'
+gem 'execjs'
+gem 'twitter-bootstrap-rails'
