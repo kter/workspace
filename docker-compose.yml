@@ -15,8 +15,11 @@ services:
       - "3000:3000"
     depends_on:
       - db
+      - nginx-proxy
     tty: true
     stdin_open: true
+    environment:
+      - "VIRTUAL_HOST=wallet.kter.jp"
   spring:
     <<: *app_base
     command: ["bundle", "exec", "spring", "server"]
@@ -37,7 +40,13 @@ services:
     volumes:
       - "db:/var/lib/postgresql/data"
       - "bundle:/usr/local/bundle"
-
+  nginx-proxy:
+    image: "jwilder/nginx-proxy"
+    container_name: "nginx-proxy"
+    ports:
+      - "80:80"
+    volumes:
+      - "/var/run/docker.sock:/tmp/docker.sock:ro"
 volumes:
   db:
     driver: local
