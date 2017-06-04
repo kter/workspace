@@ -1,0 +1,9 @@
+ja:
+  activerecord:
+    models:
+      wallet: 財布
+    attributes:
+      wallet:
+        item: '品目'
+        cost: '金額'
+        paid: '支払い有無'
