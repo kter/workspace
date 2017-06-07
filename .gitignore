@@ -1,1 +1,3 @@
 .idea
+/wallet/log
+!/wallet/log/.keep
