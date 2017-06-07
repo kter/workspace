@@ -2,13 +2,13 @@ version: '2'
 services:
   rails: &app_base
     build:
-      context: .
+      context: ./wallet/
       dockerfile: "Dockerfile.dev"
     command: ["bundle", "exec", "rails", "s", "-p", "3000", "-b", "0.0.0.0"]
     env_file:
-      - "./.env.dev"
+      - "./wallet/.env.dev"
     volumes:
-      - ".:/app"
+      - "./wallet:/app"
     volumes_from:
       - data
     ports:
