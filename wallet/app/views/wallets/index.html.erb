@@ -17,7 +17,7 @@
       <tr>
         <td><%= wallet.item %></td>
         <td><%= wallet.cost %></td>
-        <td><%= wallet.paid ? '支払い済み' : '未支払い' %></td>
+        <td><%= wallet.paid ? '払ったよ' : 'まだだよ' %></td>
         <td><%= link_to 'Show', wallet %></td>
         <td><%= link_to 'Edit', edit_wallet_path(wallet) %></td>
         <td><%= link_to 'Destroy', wallet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
